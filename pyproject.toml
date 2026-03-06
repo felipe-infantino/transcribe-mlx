@@ -1,0 +1,22 @@
+[project]
+name = "transcribe-mlx"
+version = "0.1.0"
+description = "Audio transcription CLI using MLX Whisper"
+authors = [
+    {name = "Felipe Infantino"}
+]
+requires-python = ">=3.11"
+dependencies = [
+    "mlx-whisper>=0.4.0",
+    "click>=8.1",
+]
+
+[project.scripts]
+transcribe-mlx = "app.cli:main"
+
+[tool.poetry]
+packages = [{include = "app"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
