@@ -1,8 +1,9 @@
 name: Build and Publish with Poetry
 
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - 'v*'
 
 jobs:
   deploy:
